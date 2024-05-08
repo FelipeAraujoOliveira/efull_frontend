@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
-        <div class="menu">
+    <div class="container-caue">
+        <div class="menu-caue">
             <div class="brand">
-                <img src="../assets/e-logo.png" alt="">
+                <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
                 <p>Efull Dashboard</p>
             </div>
             <div class="line"></div>
@@ -523,6 +523,10 @@ body {
     font-weight: 800;
     max-width: 600px;
   }
+  
+  p {
+    margin-bottom: 0;
+  }
 
   .branding p {
     margin-left: 10px;
@@ -533,7 +537,7 @@ body {
 /* Dash  */
 
 
-.menu {
+.menu-caue {
     width: 20%;
     height: 100vh;
     position: relative;
@@ -626,10 +630,10 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
+.container-caue {
     display: flex;
     position: relative;
-    width: 100%;
+    width: 100% !important;
 }
 
 .dashboard {

@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand me-2">
-                <img src="../assets/e-logo.png" height="32" alt="MDB Logo" loading="lazy" style="margin-top: -1px;">
+                <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" height="32" alt="MDB Logo" loading="lazy" style="margin-top: -1px;">
             </a>
             <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarButtonsExample"
                 aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
