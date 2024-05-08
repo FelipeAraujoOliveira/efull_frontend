@@ -12,7 +12,7 @@
                     <div class="icon-2">
                         <i class="bi bi-house-fill"></i>
                     </div>
-                    <router-link aria-current="page" to="/dash">Entrar</router-link>
+                    <router-link aria-current="page" to="/dash">Dashboard</router-link>
                 </div>
                 <div class="menu-item">
                     <div class="icon">
