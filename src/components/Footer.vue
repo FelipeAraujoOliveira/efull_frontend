@@ -3,7 +3,7 @@
             <div class="container-sm">
                 <ul class="footer__nav">
                     <div class="footer__addr">
-                        <img src="../assets/e-logo.png" alt="">
+                        <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
                       </div>
                   <li class="nav__item">
                     <h2 class="nav__title">Páginas</h2>

@@ -1,9 +1,9 @@
 <template>
-    <div class="container">
+    <div class="container-caue">
         <div class="menu"></div>
         <div class="menu" style="position: fixed;">
             <div class="brand">
-                <img src="../assets/e-logo.png" alt="">
+                <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
                 <p>Efull Dashboard</p>
             </div>
             <div class="line"></div>
@@ -12,7 +12,7 @@
                     <div class="icon-2">
                         <i class="bi bi-house-fill"></i>
                     </div>
-                    <a href="dashboard.html">Dashboard</a>
+                    <router-link aria-current="page" to="/dash">Entrar</router-link>
                 </div>
                 <div class="menu-item">
                     <div class="icon">
@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <div class="dashboard">
+        <div class="dashboard-caue">
             <div class="bar">
                 <div class="pages">
                     <div class="q-pages">
@@ -68,48 +68,48 @@
                     </nav>
                 </div>
             </div> 
-            <div class="table">
+            <div class="table-caue">
 
                 <ul class="responsive-table">
                  <li class="table-header">
-                    <div class="col col-1"><h2>Entrega ID</h2></div>
+                    <div class="col-caue"><h2>Entrega ID</h2></div>
                     <div class="icon-3"><i class="bi bi-upc"></i></div>
-                    <div class="col col-2"><h2>Destinatário</h2></div>
+                    <div class="col-caue"><h2>Destinatário</h2></div>
                     <div class="icon-3"><i class="bi bi-person-fill"></i></div>
-                    <div class="col col-3"><h2>Endereço</h2></div>
+                    <div class="col-caue"><h2>Endereço</h2></div>
                     <div class="icon-3"><i class="bi bi-geo-alt-fill"></i></div>
-                    <div class="col col-4"><h2>Data de Saida</h2></div>
+                    <div class="col-caue"><h2>Data de Saida</h2></div>
                     <div class="icon-3"><i class="bi bi-calendar-check-fill"></i></div>
-                    <div class="col col-5"><h2>Status</h2></div>
+                    <div class="col-caue"><h2>Status</h2></div>
                     <div class="icon-3"><i class="bi bi-info-circle-fill"></i></div>
                   </li> 
-                  <li class="table-row active">
-                    <div class="col col-1" data-label="shipping Id">42235</div>
-                    <div class="col col-2" data-label="Customer Name">Enrico Vinicus</div>
-                    <div class="col col-3" data-label="Endress">Rua Christian Aráujo Costa, 1442</div>
-                    <div class="col col-4" data-label="Amount">14/04/2024</div>
-                    <div class="col col-5 yellow" data-label="Payment Status">Pendente</div>
+                  <li class="active-caue">
+                    <div class="col-caue" data-label="shipping Id">42235</div>
+                    <div class="col-caue" data-label="Customer Name">Enrico Vinicus</div>
+                    <div class="col-caue" data-label="Endress">Rua Christian Aráujo Costa, 1442</div>
+                    <div class="col-caue" data-label="Amount">14/04/2024</div>
+                    <div class="col-caue yellow" data-label="Payment Status">Pendente</div>
                   </li>
-                  <li class="table-row ">
-                    <div class="col col-1" data-label="Job Id">42442</div>
-                    <div class="col col-2" data-label="Customer Name">Evoly LTDA</div>
-                    <div class="col col-3" data-label="Endress">Rua Alves de Souza, 365</div>
-                    <div class="col col-3" data-label="Amount">13/04/2024</div>
-                    <div class="col col-4 yellow" data-label="Payment Status">Pendente</div>
+                  <li class="">
+                    <div class="col-caue" data-label="Job Id">42442</div>
+                    <div class="col-caue" data-label="Customer Name">Evoly LTDA</div>
+                    <div class="col-caue" data-label="Endress">Rua Alves de Souza, 365</div>
+                    <div class="col-caue" data-label="Amount">13/04/2024</div>
+                    <div class="col-caue yellow" data-label="Payment Status">Pendente</div>
                   </li>
-                  <li class="table-row active">
-                    <div class="col col-1" data-label="Job Id">42257</div>
-                    <div class="col col-2" data-label="Customer Name">Felipe Cauê</div>
-                    <div class="col col-3" data-label="Endress">Rua Valdir Junior Pererira, 25</div>
-                    <div class="col col-3" data-label="Amount">12/04/2024</div>
-                    <div class="col col-4 red" data-label="Payment Status">devolvida</div>
+                  <li class="active-caue">
+                    <div class="col-caue" data-label="Job Id">42257</div>
+                    <div class="col-caue" data-label="Customer Name">Felipe Cauê</div>
+                    <div class="col-caue" data-label="Endress">Rua Valdir Junior Pererira, 25</div>
+                    <div class="col-caue" data-label="Amount">12/04/2024</div>
+                    <div class="col-caue red" data-label="Payment Status">devolvida</div>
                   </li>
-                  <li class="table-row">
-                    <div class="col col-1" data-label="Job Id">42311</div>
-                    <div class="col col-2" data-label="Customer Name">Caio Sartunino</div>
-                    <div class="col col-3" data-label="Endress">Rua Felipe Humilde Araujo, 777</div>
-                    <div class="col col-3" data-label="Amount">11/04/2024</div>
-                    <div class="col col-4 green" data-label="Payment Status">Entregue</div>
+                  <li class="">
+                    <div class="col-caue" data-label="Job Id">42311</div>
+                    <div class="col-caue" data-label="Customer Name">Caio Sartunino</div>
+                    <div class="col-caue" data-label="Endress">Rua Felipe Humilde Araujo, 777</div>
+                    <div class="col-caue" data-label="Amount">11/04/2024</div>
+                    <div class="col-caue green" data-label="Payment Status">Entregue</div>
                   </li>
                 </ul>
               </div>
@@ -131,6 +131,8 @@
 body {
   background: #f1f1f1;
 }
+
+
 
 .carousel-inner img {
   border-radius: 32px;
@@ -392,6 +394,464 @@ body {
     margin-left: 10px;
     max-width:450px;
   }
+
+  /*Dash*/
+
+
+.menu {
+    width: 20%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brand {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    font-weight: bold;
+    color: #4c4c4c;
+}
+
+.brand img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.line {
+    margin-bottom: 30px;
+    width: 800%;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), black, black,  rgba(255, 255, 255, 0));
+    transform: scale(0.1);
+}
+
+.menu-itens {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-item {
+    position: relative;
+    padding: 16px;
+    gap: 18px;
+    width: 60%;
+    border-radius: 16px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #FF0000;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.menu-item-2 {
+    position: relative;
+    padding: 16px;
+    gap: 18px;
+    width: 60%;
+    border-radius: 16px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+
+.icon-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: rgb(29, 29, 29);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-caue {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.dashboard-caue {
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 40px;
+}
+
+.q-pages {
+    display: flex;
+    gap: 8px;
+}
+
+.pag {
+    color: #828181;
+}
+
+.bar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #4c4c4c;
+    font-size: 18px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.info {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.card-info {
+    position: relative;
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 32px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.infos {
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+}
+
+.c-text {
+    width: 60%;
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+}
+
+.c-text p {
+    font-size: 1.2rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#data {
+    width: 200px;
+}
+
+
+.number {
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.icon-3 {
+    background-image: linear-gradient(to right, #FF0000, #FF8000, #FFC000);
+    color: white;  
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    font-size: 20px; 
+}
+
+.col-caue {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  
+
+.col h2 {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.info-icon {
+    background-image: linear-gradient(to right, #FF0000, #FF8000, #FFC000);
+    color: white;  
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    font-size: 24px;
+}
+
+.info-icon-2 {
+    color: rgb(19, 18, 18);  
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.congrats {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    border-radius: 32px;
+    height: 80%;
+    padding: 30px;
+    background-color: #212529;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.graph {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border-radius: 32px;
+    padding: 30px;
+    height: 80%;
+    background: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.g-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.c-box {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.c-icon {
+    background-image: linear-gradient(to right, #FF0000, #FF8000, #FFC000);
+    color: white;  
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    font-size: 84px;
+}
+
+.title {
+    font-weight: 800;
+}
+
+svg {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+  }
+  
+  polyline {
+    stroke-dasharray:  1000;
+    stroke-dashoffset: 1000;
+    animation: dash 4s ease-in forwards;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .text {
+    animation: moveRightToLeft 10s linear infinite;
+    height: 20px;
+    text-wrap: nowrap;
+  }
+  
+.t-box {
+    overflow: hidden;
+}
+
+.marquee-container {
+    width: 80%;
+    overflow: hidden;
+  }
+  
+  .marquee {
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes moveRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  .g-box b {
+    margin-left: 20px;
+  }
+
+  .g-icon {
+    position: absolute;
+    font-size: 24px;
+    display: flex;
+    gap: 24px;
+    right: 0;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .responsive-table li {
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .responsive-table .table-header {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    border-radius: 32px 32px 0px 0px;
+  }
+
+  .table-caue {
+    background-color: #f8f9fa;
+    border-radius: 32px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  @media all and (max-width: 767px) {
+    .responsive-table .table-header {
+      display: none;
+    }
+    .responsive-table li {
+      display: block;
+    }
+    .responsive-table .col {
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+    }
+    .responsive-table .col:before {
+      padding-right: 10px;
+      content: attr(data-label);
+      flex-basis: 50%;
+      text-align: right;
+    }
+  }
+
+  .yellow{
+    color: #ffbf00;
+  }
+
+  .line-2 {
+    width: 100%;
+    height: 1px;
+    background-color: #4c4c4c;
+  }
+
+  .active-caue  {
+    background-color: #f1f1f1;
+    border-radius: 0px !important;
+  }
+
+
+
+  
+ 
+  
 
 
   

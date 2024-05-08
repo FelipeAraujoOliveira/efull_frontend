@@ -31,7 +31,7 @@ body {
 
 
 .btn-login {
-    width: auto;
+    width: 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +49,7 @@ body {
 
 .btn-login:hover {
     opacity: 0.5;
+
 }
 
 .btn:hover  {
