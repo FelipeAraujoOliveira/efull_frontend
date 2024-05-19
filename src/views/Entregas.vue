@@ -6,7 +6,6 @@
                 <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
                 <p>Efull Dashboard</p>
             </div>
-            <div class="line"></div>
             <div class="menu-itens">
                 <div class="menu-item-2">
                     <div class="icon-2">
@@ -42,7 +41,7 @@
                     <div class="icon-2">
                         <i class="bi bi-geo-alt-fill"></i>
                     </div>
-                    <p>Rastreamento</p>
+                    <p><a href="rastreamento.html">Rastreamento</a></p>
                 </div>
             </div>
         </div>
@@ -84,7 +83,7 @@
                     <div class="icon-3"><i class="bi bi-info-circle-fill"></i></div>
                   </li> 
                   <li class="active-caue">
-                    <div class="col-caue" data-label="shipping Id">42235</div>
+                    <div class="col-caue" data-label="shipping Id"> <router-link aria-current="page" to="/roteamento">42235</router-link> </div>
                     <div class="col-caue" data-label="Customer Name">Enrico Vinicus</div>
                     <div class="col-caue" data-label="Endress">Rua Christian Aráujo Costa, 1442</div>
                     <div class="col-caue" data-label="Amount">14/04/2024</div>
@@ -124,6 +123,7 @@
     padding: 0;
     margin: 0;
     font-family: "Raleway", sans-serif;
+    font-size: 2.1vh;
 }
 
 

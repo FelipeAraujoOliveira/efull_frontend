@@ -1,27 +1,34 @@
 <script setup>
-    import Footer from '@/components/Footer.vue';
     
 </script>
 
 <template>
-   <div style="margin-top: 2vh;" class="container">
+   <div class="container">
 	<div class="screen">
 		<div class="screen__content">
 			<form class="login">
                 <img class="logo" src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Usuário / Email">
+					<input type="text" class="login__input" placeholder="Nome Completo">
+				</div>
+                <div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="Email">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
 					<input type="password" class="login__input" placeholder="Senha">
 				</div>
-				<router-link style="text-decoration: none;" class="btn-login" to="/dash">
+                <div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Confirmar Senha">
+				</div>
+                <router-link style="text-decoration: none;" class="btn-login" to="/dash">
 					Entrar
-				</router-link>	
+				</router-link>
                       <div class="links">
-                          <router-link class="router-link" to="/register"><p>Ainda não possui um cadastro?</p></router-link>
+                          <router-link class="router-link" to="/login"><p>Já possui um cadastro?</p></router-link>
                           <router-link class="router-link" to="/redefinir-senha"><p>Esqueci minha senha</p></router-link>
                       </div>
 			</form>

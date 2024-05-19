@@ -5,7 +5,6 @@
                 <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
                 <p>Efull Dashboard</p>
             </div>
-            <div class="line"></div>
             <div class="menu-itens">
                 <div class="menu-item">
                     <div class="icon">
@@ -41,7 +40,7 @@
                     <div class="icon-2">
                         <i class="bi bi-geo-alt-fill"></i>
                     </div>
-                    <p>Rastreamento</p>
+                    <p><a href="rastreamento.html">Rastreamento</a></p>
                 </div>
             </div>
         </div>
@@ -52,7 +51,7 @@
                     <div class="q-pages">
                         <p class="pag">Páginas</p>
                         <p>/</p>
-                        <p>Dashoboard</p>
+                        <p>Dashboard</p>
                     </div>
                     <h1>Dashboard</h1>
                 </div>
@@ -263,6 +262,10 @@
 
 body {
   background: #f1f1f1;
+}
+
+* {
+  font-size: 2.1vh;
 }
 
 .carousel-inner img {
@@ -643,7 +646,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .q-pages {
@@ -799,7 +802,7 @@ nav ul {
     align-items: center;
     width: 60%;
     border-radius: 32px;
-    height: 80%;
+    height: 100%;
     padding: 30px;
     background-color: #212529;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -814,7 +817,7 @@ nav ul {
     width: 40%;
     border-radius: 32px;
     padding: 30px;
-    height: 38rem;
+    height: auto;
     background: #f8f9fa;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }

@@ -15,13 +15,12 @@
             <div class="collapse navbar-collapse" id="navbarButtonsExample">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Início</a>
+                        <router-link style="text-decoration: none; color:#212529" aria-current="page" to="/">Inicío</router-link>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <button data-mdb-ripple-init type="button" class="btn">Politícas</button>
-                    <button data-mdb-ripple-init type="button" class="btn">Sobre</button>
-                    <router-link class="btn-login" aria-current="page" to="/login">Entrar</router-link>
+                    <router-link style="text-decoration: none;" class="btn" aria-current="page" to="/about">Sobre</router-link>
+                    <router-link style="text-decoration: none;" class="btn-login" aria-current="page" to="/login">Entrar</router-link>
                 </div>
             </div>
         </div>

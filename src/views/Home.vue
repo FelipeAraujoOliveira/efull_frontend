@@ -26,7 +26,7 @@
               <div class="b-box">
                 <h1>A dashboard que inova a logística </h1>
                 <p>Use as estatísticas ao seu favor, Cresça junto com elas. A dashboard logística inovadora aproveita dados para insights valiosos. Com análises precisas, identifica padrões, otimiza rotas e reduz custos.</p>
-                <router-link class="btn-login" aria-current="page" to="/dash">Entrar</router-link>
+                <router-link style="text-decoration: none;" class="btn-login" aria-current="page" to="/dash">Entrar</router-link>
               </div>
             </div>
             <div class="aviso">
