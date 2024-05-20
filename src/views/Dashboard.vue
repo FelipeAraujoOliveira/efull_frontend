@@ -804,6 +804,7 @@ nav ul {
     border-radius: 32px;
     height: 100%;
     padding: 30px;
+    height: 100%;
     background-color: #212529;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
