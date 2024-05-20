@@ -27,13 +27,13 @@
                 <div class="icon-2">
                     <i class="bi bi-house-fill"></i>
                 </div>
-                <p>Dashboard</p>
+                <a href="http://localhost:5173/dash">Dashboard</a>
             </div>
             <div class="menu-item-2">
                 <div class="icon-2">
                     <i class="bi bi-truck"></i>
                 </div>
-                <router-link aria-current="page" to="/entregas">Entregas</router-link>
+                <a href="http://localhost:5173/entregas">Entregas</a>
             </div>
             <div class="menu-item-2">
                 <div class="icon-2">
@@ -66,14 +66,14 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([-22.9068, -43.1729], 7);
+        var map = L.map('map').setView([-22.217779885343628, -49.949171330618135], 14);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors',
             maxZoom: 18
         }).addTo(map);
 
-        var startPoint = [-22.9068, -43.1729]; // Rio de Janeiro
-        var endPoint = [-23.5505, -46.6333]; // São Paulo
+        var startPoint = [-22.196681249013338, -49.93104369372776];
+        var endPoint = [-22.236794111214376, -49.96647246712299];
 
         L.marker(startPoint).addTo(map).bindPopup("Origem");
         L.marker(endPoint).addTo(map).bindPopup("Destino");
