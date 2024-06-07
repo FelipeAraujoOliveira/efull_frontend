@@ -802,9 +802,8 @@ nav ul {
     align-items: center;
     width: 60%;
     border-radius: 32px;
-    height: 100%;
+    height: 80%;
     padding: 30px;
-    height: 100%;
     background-color: #212529;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -818,7 +817,7 @@ nav ul {
     width: 40%;
     border-radius: 32px;
     padding: 30px;
-    height: auto;
+    height: 80%;
     background: #f8f9fa;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
