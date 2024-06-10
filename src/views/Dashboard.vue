@@ -1,10 +1,13 @@
 <template>
-    <div class="container-caue">
+  <div class="app">
+  <transition name="fade">
+    <div v-if="isMounted" class="container-caue">
         <div class="menu-caue">
             <div class="brand">
                 <img src="https://res.cloudinary.com/daox93pja/image/upload/v1715122906/e-full/rxdmtvmlczmg69wkeovx.png" alt="">
                 <p>Efull Dashboard</p>
             </div>
+            <div class="line"></div>
             <div class="menu-itens">
                 <div class="menu-item">
                     <div class="icon">
@@ -17,24 +20,6 @@
                         <i class="bi bi-truck"></i>
                     </div>
                     <router-link aria-current="page" to="/entregas">Entregas</router-link>
-                </div>
-                <div class="menu-item-2">
-                    <div class="icon-2">
-                        <i class="bi bi-people-fill"></i>
-                    </div>
-                    <p>Equipe</p>
-                </div>
-                <div class="menu-item-2">
-                    <div class="icon-2">
-                        <i class="bi bi-bar-chart-fill"></i>
-                    </div>
-                    <p>Desempenho</p>
-                </div>
-                <div class="menu-item-2">
-                    <div class="icon-2">
-                        <i class="bi bi-file-earmark-fill"></i>
-                    </div>
-                    <p>Relatórios</p>
                 </div>
                 <div class="menu-item-2">
                     <div class="icon-2">
@@ -133,11 +118,6 @@
                             <div class="info-icon-2"><i class="bi bi-share"></i></div>
                         </div>
                         <h1>Resumo da Logística</h1>
-                        <div class="marquee-container">
-                            <div class="marquee">
-                                <p class="text">Nota total da empresa em relação aos dados:<b class="green">8.5 &nbsp; </b>Nota de feedback do cliente:<b class="green">6.8 &nbsp;</b></p>
-                            </div>
-                          </div>
                         <div>
                             <h3>Total de Clientes: <b>223</b></h3>
                           </div>
@@ -250,11 +230,34 @@
             </div>
         </div>
     </div>
+  </transition>
+</div>
 </template>
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      isMounted: false
+    };
+  },
+  mounted() {
+    this.isMounted = true;
+  }
+}
+</script>
+
 
 <style scoped>
 
-/*Style */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 500ms ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -541,6 +544,7 @@ body {
 
 
 .menu-caue {
+  margin-top: 30px;
     width: 20%;
     height: 100vh;
     position: relative;
@@ -580,7 +584,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .menu-item {

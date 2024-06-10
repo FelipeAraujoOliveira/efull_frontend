@@ -1,4 +1,4 @@
-<html lang="en" class=""><head>
+<html lang="pt-br" class=""><head>
 
     <meta charset="UTF-8">
     <title>Efull</title>
@@ -14,7 +14,9 @@
   <style>
           
           #foldable {
+              font-size: 20px;
               width: 320px;
+              border-radius: 20px;
           }
           #form {
               margin-top: 10px;
@@ -76,6 +78,27 @@
           .title{
             font-size: 15px;
           }
+
+          .btn-login {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #FF0000, #FFC000);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 500ms;
+}
+
+.btn-login:hover {
+    opacity: 0.5;
+}
         </style>
       </head>
   
@@ -84,11 +107,12 @@
     <div id='map' class='map' style='width: 100%;'>
         <div id='foldable' class='tt-overlay-panel -left-top -medium js-foldable'>
 
-            <h1>Informações da Entrega</h1>
+            <h2><b>Informações</b></h2>
             <p><strong>Remetente:</strong> <span id="remetente"></span></p>
             <p><strong>Destinatário:</strong> <span id="destinatario"></span></p>
             <p><strong>Distância:</strong> <span id="distancia"></span> km</p>
             <p><strong>Status:</strong> <span id="status"></span></p>
+            <a class="btn-login" href="/Entregas"><b>Voltar</b></a>
             <p class="title">Visualize aqui a sua rota</p>
             <form id=form>
                 <div id='startSearchBox' class='searchbox-container'>

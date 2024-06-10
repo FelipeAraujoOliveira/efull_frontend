@@ -17,36 +17,19 @@ function truncate(value, limit) {
                     alt="">
                 <p>Efull Dashboard</p>
             </div>
+            <div class="line"></div>
             <div class="menu-itens">
                 <div class="menu-item-2">
                     <div class="icon-2">
                         <i class="bi bi-house-fill"></i>
                     </div>
-                    <p>Dashboard</p>
+                    <router-link aria-current="page" to="/dash">Dashboard</router-link>
                 </div>
                 <div class="menu-item">
                     <div class="icon">
                         <i class="bi bi-truck"></i>
                     </div>
                     <router-link aria-current="page" to="/entregas">Entregas</router-link>
-                </div>
-                <div class="menu-item-2">
-                    <div class="icon-2">
-                        <i class="bi bi-people-fill"></i>
-                    </div>
-                    <p>Equipe</p>
-                </div>
-                <div class="menu-item-2">
-                    <div class="icon-2">
-                        <i class="bi bi-bar-chart-fill"></i>
-                    </div>
-                    <p>Desempenho</p>
-                </div>
-                <div class="menu-item-2">
-                    <div class="icon-2">
-                        <i class="bi bi-file-earmark-fill"></i>
-                    </div>
-                    <p>Relatórios</p>
                 </div>
                 <div class="menu-item-2">
                     <div class="icon-2">
@@ -80,21 +63,21 @@ function truncate(value, limit) {
             <div class="table-caue">
                 <ul class="responsive-table">
                  <li class="active-caue-1">
-                    <div class="col-caue"><h2>Entrega ID</h2></div>
-                    <div class="col-caue"><h2>Remetente</h2></div>
-                    <div class="col-caue"><h2>Destinatário</h2></div>
-                    <div class="col-caue"><h2>Rastreio</h2></div>
-                    <div class="col-caue"><h2>Data</h2></div>
-                    <div class="col-caue"><h2>Status</h2></div>
+                    <div class="list"><div class="col-caue"><h2>Entrega ID</h2></div></div>
+                    <div class="list"><div class="col-caue"><h2>Remetente</h2></div></div>
+                    <div class="list"><div class="col-caue"><h2>Destino</h2></div></div>
+                    <div class="list"><div class="col-caue"><h2>Rastreio</h2></div></div>
+                    <div class="list"><div class="col-caue"><h2>Data</h2></div></div>
+                    <div class="list"><div class="col-caue"><h2>Status</h2></div></div>
                   </li> 
                   <li class="active-caue" v-for="entrega in entregas" :key="entrega.id">
                     <div class="col-caue" data-label="shipping Id">5534-{{ entrega.id }}</div>
-                    <div class="col-caue">{{ entrega.enderecoRemetente }}</div>
+                    <div class="col-caue"><b>{{ entrega.enderecoRemetente }}</b></div>
                     <div class="col-caue" data-label="Customer Name">{{ entrega.enderecoDestinatario }}</div>
-                    <router-link :to="{ path: '/mapa-view-entrega', query: { id: entrega.id, destinatario: entrega.enderecoDestinatario, remetente: entrega.enderecoRemetente } }"><p><b>Rastrear</b></p></router-link>
+                    <router-link :to="{ path: '/mapa-view-entrega', query: { id: entrega.id, destinatario: entrega.enderecoDestinatario, remetente: entrega.enderecoRemetente } }"><b>Rastrear</b></router-link>
                     <div class="col-caue" data-label="Amount">{{truncate(entrega.dataEntrega, 10) }}</div>
-                    <div class="col-caue yellow" data-label="Payment Status" v-if="entrega.status != 'Pendente'"><div class="btn-login" >{{ entrega.status }}</div></div>
-                    <button class="btn-login-2" @click="atualizarStatus(entrega.id)"
+                    <div class="col-caue yellow" data-label="Payment Status" v-if="entrega.status != 'Pendente'"><div class="btn-login-2" >{{ entrega.status }}</div></div>
+                    <button class="btn-login" @click="atualizarStatus(entrega.id)"
                             v-if="entrega.status === 'Pendente'">Finalizar Entrega</button>
                 </li>
                 </ul>
@@ -158,11 +141,15 @@ export default {
 /*Style */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-.active-caue-1, .responsive-table {
-    margin: 0 !important;
-    justify-content: space-between !important;
+.active-caue-1 {
+    gap: 30px;
 }
+.list {
+    display: flex;
+    justify-content: left !important;
+    text-align: left !important;
+}
+
 
 .active-caue-1 h2 {
     font-size: 24px;
@@ -478,6 +465,7 @@ p {
 
 
 .menu-caue {
+    margin-top: 30px;
     width: 20%;
     height: 100vh;
     position: fixed;
@@ -517,7 +505,7 @@ p {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 20px;
 }
 
 .menu-item {
@@ -878,23 +866,25 @@ h3 {
     cursor: pointer;
 }
 
+
+
+.responsive-table{
+    position: relative;
+    margin-left: -80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left !important;  
+    width: 100%;
+}
+
 .responsive-table li {
-    padding: 35px 40px;
+    padding: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.responsive-table .table-header {
-    font-size: 14px;
-    letter-spacing: 0.03em;
-    border-radius: 32px 32px 0px 0px;
-}
 
-.table {
-    background-color: #f8f9fa;
-    border-radius: 32px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 
 
