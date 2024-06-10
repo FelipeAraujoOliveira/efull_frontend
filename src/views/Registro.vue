@@ -116,6 +116,7 @@ onMounted(() => {
   font-weight: 700;
   width: 100%;
   transition: .2s;
+  margin-bottom: 20px;
 }
 
 .login__input:active,
@@ -138,22 +139,29 @@ li {
 
 .response-message {
   margin-top: 20px;
-  color: red;
+  color: rgb(71, 71, 71);
   font-weight: bold;
 }
 
 .btn-login {
-  padding: 10px 20px;
-  background-color: #ff7300;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #FF0000, #FFC000);
   border: none;
-  border-radius: 5px;
-  color: white;
+  color: rgb(255, 255, 255);
+  padding: 4px 20px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  margin-left: 10px;
+  transition: 500ms;
 }
 
 .btn-login:hover {
-  background-color: #e56400;
+  opacity: 0.5;
 }
+
 </style>

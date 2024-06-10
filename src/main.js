@@ -3,8 +3,6 @@ import App from './App.vue';
 import router from './router';
 import './assets/main.css';
 import axios from 'axios';
-// src/main.js
-
 
 // Criação de uma instância de axios
 const axiosInstance = axios.create({

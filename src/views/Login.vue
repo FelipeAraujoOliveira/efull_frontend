@@ -12,26 +12,30 @@
             <i class="login__icon fas fa-lock"></i>
             <input v-model="password" type="password" class="login__input" placeholder="Senha">
           </div>
-          <button type="submit" class="btn-login">Entrar</button>  
+          <button @click="submitForm" class="btn-login" :disabled="loading">Entrar</button>
+          <div v-if="loading" class="loader-login"></div>
+
           <div class="links">
             <router-link class="router-link" to="/register"><p>Ainda não possui um cadastro?</p></router-link>
             <router-link class="router-link" to="/redefinir-senha"><p>Esqueci minha senha</p></router-link>
+            <div v-if="responseMessage" class="response-message">{{ responseMessage }}</div>
           </div>
         </form>
-        <div v-if="responseMessage" class="response-message">{{ responseMessage }}</div>
       </div>  
     </div>
   </div>
 </template>
 
 <script setup>
-import axios from 'axios';
+
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import axios from 'axios';
 
 const username = ref('');
 const password = ref('');
 const responseMessage = ref('');
+const loading = ref(false);
 const router = useRouter();
 
 const fetchUsers = async () => {
@@ -45,27 +49,51 @@ const fetchUsers = async () => {
 };
 
 const submitForm = async () => {
+  loading.value = true; // Mostra o loader
+  responseMessage.value = ''; // Limpa a mensagem de resposta anterior
+
   try {
     const users = await fetchUsers();
-    
-    
     const user = users.find(u => (u.username === username.value || u.email === username.value) && u.password === password.value);
     
     if (user) {
-      
-      router.push('/dash');
+      setTimeout(() => {
+        router.push('/dash');
+      }, 3000); // Espera 3 segundos antes de redirecionar
     } else {
-      responseMessage.value = "Usuário ou senha incorretos.";
+      setTimeout(() => {
+        loading.value = false; // Esconde o loader
+        responseMessage.value = "Usuário ou senha incorretos.";
+      }, 3000); // Espera 3 segundos antes de mostrar a mensagem de erro
     }
   } catch (error) {
     console.error("Erro ao fazer login:", error);
-    responseMessage.value = "Erro ao fazer login.";
+    setTimeout(() => {
+      loading.value = false; // Esconde o loader
+      responseMessage.value = "Erro ao fazer login.";
+    }, 3000); // Espera 3 segundos antes de mostrar a mensagem de erro
   }
 };
+
 </script>
+
   <style scoped>
    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
+   .loader-login {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side,#ffa516 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%,#ffa516);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+  }
+  
+  @keyframes l13{ 
+    100%{transform: rotate(1turn)}
+  }
 .links {
    text-align: center;
    display: flex;
